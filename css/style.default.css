@@ -238,16 +238,16 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
 * =====================
 *
 */
-.services-section hr {
+.achievements-section hr {
   border-color: #fff;
 }
 
-.services-section .icon {
+.achievements-section .icon {
   font-size: 3.5rem;
   text-shadow: 5px 5px 0 #3aa18c;
 }
 
-.services-section p.description {
+.achievements-section p.description {
   font-size: 0.9rem;
 }
 
