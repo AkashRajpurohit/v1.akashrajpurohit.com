@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 [data-animate] {
   visibility: hidden;
 }
@@ -11,6 +11,7 @@
 
 body {
   color: #555;
+  font-family: 'Ubuntu', "Roboto", sans-serif !important;
 }
 
 p {
