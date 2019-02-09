@@ -55,8 +55,8 @@
           <div class="row">
             <div data-animate="fadeInUp" class="col-lg-6">
               <p>My name is Akash Rajpurohit and I am a full stack developer  completing my <strong>Bachelor of Engineering in Information Technology</strong> from Vidyavardhini's College Of Engineering & Technology. Currently I am in third year with average CGPI of <u class="dotted">8.42</u>.</p>
-              <p>I have started Web development from past <strong>11 months</strong> and started as a Frontend Developer with <u class="dotted">HTML5, CSS3, Scss, JavaScript & jQuery</u>. Recently from past 6 months I have also started working as a Backend Developer with <u class="dotted">Node.js</u> as my core backend technology along with <u class="dotted">MongoDB Database</u>. At present I am quite confident in working with Node.js and build REST api's using this stack. With Nodejs I prefer to use MongoDB as database however I am also comfortable working with RDBMS databases like <u class="dotted">MySQL, SQLite and PostgreSQL</u></p>
-              <p>Currently I am looking forward to two other technologies which are <u class="dotted">GraphQL</u> for query processing and <u class="dotted">Django</u> for backend. Also I have started adopting <u class="dotted">TypeScript</u> for maintaining better codebase for my new upcoming projects. I also have a little experience in DevOps. I use the strategy of containerization using <u class="dotted">Docker</u>, use <u class="dotted">Git</u> as Version Control System and Linux Debain as my primary OS to work on. I switch between <u class="dotted">Visual Studio Code</u> and <u class="dotted">Sublime Text</u> for development</p>
+              <p>I have started Web development from past <strong id="frontend-dev-experience"></strong> and started as a Frontend Developer with <u class="dotted">HTML5, CSS3, Scss, JavaScript & jQuery</u>. Recently from past <strong id="fullstack-dev-experience"></strong> I have also started working as a Backend Developer with <u class="dotted">Node.js</u> as my core backend technology along with <u class="dotted">MongoDB Database</u>. At present I am quite confident in working with Node.js and build REST api's using this stack. With Nodejs I prefer to use MongoDB as database however I am also comfortable working with RDBMS databases like <u class="dotted">MySQL, SQLite and PostgreSQL</u></p>
+              <p>Currently I am looking forward to two other technologies which are <u class="dotted">GraphQL</u> for query processing and <u class="dotted">Django</u> for backend. Also I have started adopting <u class="dotted">TypeScript</u> for maintaining better codebase for my new upcoming projects. I also have a little experience in DevOps. I use the strategy of containerization using <u class="dotted">Docker</u>, use <u class="dotted">Git</u> as Version Control System and Linux as my primary OS to work on. I switch between <u class="dotted">Visual Studio Code</u> and <u class="dotted">Sublime Text</u> for development</p>
             </div>
             <div data-animate="fadeInUp" class="col-lg-6">
               <div class="skill-item">
@@ -96,7 +96,7 @@
                 </div>
               </div>
               <div class="skill-item">
-                <div class="progress-title">Linux Server</div>
+                <div class="progress-title">Linux</div>
                 <div class="progress">
                   <div role="progressbar" style="width: 72%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-skill6"></div>
                 </div>
@@ -411,12 +411,22 @@
     <script src="vendor/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="vendor/jquery.counterup/jquery.counterup.js"></script>
     <script src="js/front.js"></script>
-    <script> 
+    <script>
       document.addEventListener("DOMContentLoaded", hideLoader);
       function hideLoader() {
         document.getElementById('main_container').classList.remove('hide')
         document.getElementById('loader').classList.add('hide')
       }
+      // Get experience date to display
+      const frontendDate = new Date("September 1, 2017").getTime() // Approx time during which my dev carrier as frontend dev
+      const fullstackDate = new Date("June 1, 2018").getTime() // Approx time during which my dev carrier as frontend dev
+      const today = new Date() // Today's date
+      const oneMonth = 1000 * 60 * 60 * 24 * 30 // Approximating 30 days for every month in a year
+      const diffMonthsForFrontendDev = Math.floor((today - frontendDate) / oneMonth) // Difference in months from that day to today
+      const diffMonthsForBackendDev = Math.floor((today - fullstackDate) / oneMonth) // Difference in months from that day to today
+      // Display the respective months
+      document.querySelector('#frontend-dev-experience').innerHTML = diffMonthsForFrontendDev + " months"
+      document.querySelector('#fullstack-dev-experience').innerHTML = diffMonthsForBackendDev + " months"
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130876778-2"></script>
