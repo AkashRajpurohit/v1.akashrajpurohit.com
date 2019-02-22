@@ -622,6 +622,10 @@ footer.main-footer p.social a.whatsapp {
   background-color: #075e54;
 }
 
+footer.main-footer p.social a.phone {
+  background-color: #00b3f6;
+}
+
 footer.main-footer p {
   margin: 0;
   color: #eee;
