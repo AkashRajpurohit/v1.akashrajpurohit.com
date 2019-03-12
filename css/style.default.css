@@ -626,6 +626,10 @@ footer.main-footer p.social a.phone {
   background-color: #00b3f6;
 }
 
+footer.main-footer p.social a.github {
+  background-color: #AD5C51;
+}
+
 footer.main-footer p {
   margin: 0;
   color: #eee;
