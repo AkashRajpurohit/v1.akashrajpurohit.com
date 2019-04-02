@@ -416,9 +416,12 @@
     <script src="vendor/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="vendor/jquery.counterup/jquery.counterup.js"></script>
     <script src="js/front.js"></script>
+    <script src="js/topbar.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", hideLoader);
+      topbar.show()
       function hideLoader() {
+        topbar.hide()
         document.getElementById('main_container').classList.remove('hide')
         document.getElementById('loader').classList.add('hide')
       }
