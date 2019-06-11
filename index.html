@@ -436,11 +436,32 @@
       const fullstackDate = new Date("June 1, 2018").getTime() // Approx time during which my dev carrier as frontend dev
       const today = new Date() // Today's date
       const oneMonth = 1000 * 60 * 60 * 24 * 30 // Approximating 30 days for every month in a year
-      const diffMonthsForFrontendDev = Math.floor((today - frontendDate) / oneMonth) // Difference in months from that day to today
-      const diffMonthsForBackendDev = Math.floor((today - fullstackDate) / oneMonth) // Difference in months from that day to today
+      const diffMonthsForFrontendDev = Math.floor((today - frontendDate) / oneMonth)
+      const diffMonthsForBackendDev = Math.floor((today - fullstackDate) / oneMonth)
+
+      const frontendYears = Math.floor(diffMonthsForFrontendDev / 12)
+      const frontendMonths = diffMonthsForFrontendDev % 12
+
+      const backendYears = Math.floor(diffMonthsForBackendDev / 12)
+      const backendMonths = diffMonthsForBackendDev % 12
+
+      let frontendDateToDisplay = ""
+      let backendDateToDisplay = ""
+
+      if(frontendMonths === 0) {
+        frontendDateToDisplay = frontendYears + " year(s)"
+      } else {
+        frontendDateToDisplay = `${frontendYears} year(s) and ${frontendMonths} month(s)`
+      }
+
+      if(backendMonths === 0) {
+        backendDateToDisplay = backendYears + " year(s)"
+      } else {
+        backendDateToDisplay = `${backendYears} year(s) and ${backendMonths} month(s)`
+      }
       // Display the respective months
-      document.querySelector('#frontend-dev-experience').innerHTML = diffMonthsForFrontendDev + " months"
-      document.querySelector('#fullstack-dev-experience').innerHTML = diffMonthsForBackendDev + " months"
+      document.querySelector('#frontend-dev-experience').innerHTML = frontendDateToDisplay
+      document.querySelector('#fullstack-dev-experience').innerHTML = backendDateToDisplay
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130876778-2"></script>
